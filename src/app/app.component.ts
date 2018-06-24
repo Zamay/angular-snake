@@ -48,7 +48,6 @@ export class AppComponent {
   }
 
   handleKeyboardEvents(e: KeyboardEvent) {
-    console.log(e.keyCode);
     if (e.keyCode === CONTROLS.LEFT && this.snake.direction !== CONTROLS.RIGHT) {
       this.tempDirection = CONTROLS.LEFT;
     } else if (e.keyCode === CONTROLS.UP && this.snake.direction !== CONTROLS.DOWN) {
@@ -62,7 +61,6 @@ export class AppComponent {
 
   //TODO: пока только такое решение
   swipeEvents(num: number) {
-    console.log(num);
     if (num === CONTROLS.LEFT && this.snake.direction !== CONTROLS.RIGHT) {
       this.tempDirection = CONTROLS.LEFT;
     } else if (num === CONTROLS.UP && this.snake.direction !== CONTROLS.DOWN) {
@@ -117,7 +115,6 @@ export class AppComponent {
     this.snake.parts.unshift(newHead);
     this.board[newHead.y][newHead.x] = true;
 
-    console.log('updatePosition - ' + this.tempDirection);
     this.snake.direction = this.tempDirection;
 
     setTimeout(() => {
