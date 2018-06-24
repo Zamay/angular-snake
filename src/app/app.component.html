@@ -1,4 +1,8 @@
-<div class="game-container">
+<div class="game-container"
+     (swipeleft)="swipeEvents(65)"
+     (swiperight)="swipeEvents(68)"
+     (swipeup)="swipeEvents(87)"
+     (swipedown)="swipeEvents(83)">
   <div class="game-header">
     <h3 class="logo">Snake</h3>
     <div class="score-block">
